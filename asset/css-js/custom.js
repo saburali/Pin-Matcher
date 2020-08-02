@@ -4,6 +4,15 @@ function randomNumFun() {
     document.getElementById('generateNum').value = randomNumber;
 }
 
+
+// Input Number Value
+function btnKey(id) {
+    let prevValue = document.getElementById('inputPin').value;
+    let key = document.getElementById(id).innerHTML;
+    document.getElementById('inputPin').value = prevValue + key;
+}
+
+
 // Some Use Common Function
 function emptyValue(id) {
     document.getElementById(id).value = '';
