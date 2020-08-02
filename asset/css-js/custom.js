@@ -19,6 +19,22 @@ function btnKey(id) {
 }
 
 
+// Clean Value (Bonus)
+function clean() {
+    document.getElementById('inputPin').value = "";
+    play();
+}
+
+// Clean Last Value (Bonus)
+function cleanLast() {
+    var inputResult = document.getElementById('inputPin').value;
+    var removeValue = inputResult.slice(0, inputResult.length - 1);
+    document.getElementById('inputPin').value = removeValue;
+
+    play();
+}
+
+
 // Some Use Common Function
 function emptyValue(id) {
     document.getElementById(id).value = '';
