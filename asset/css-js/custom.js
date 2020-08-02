@@ -44,6 +44,12 @@ function submitBtn() {
         document.getElementById('generateMessage').innerText = "Please Generate Random Number First";
         shake('generateMessage');
     }
+    else {
+        if (typeNum.length != 4) {
+            document.getElementById('textMessage').innerText = "Press the 4 digit number";
+            shake('textMessage');
+        }
+    }
 }
 
 
