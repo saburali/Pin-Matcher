@@ -90,6 +90,15 @@ function tryLeft(id) {
 }
 
 
+// Disable button (Optional)
+function disableBtn(id) {
+    let button = document.getElementById(id);
+    button.style.cursor = "not-allowed";
+    button.setAttribute('disabled', 'true');
+    button.title = "Please Reload Page";
+}
+
+
 // Some Use Common Function
 function emptyValue(id) {
     document.getElementById(id).value = '';
