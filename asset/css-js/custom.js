@@ -5,6 +5,7 @@ function randomNumFun() {
     document.getElementById('textMessage').innerText = "Press & Submit the Pin Code";
     shake('textMessage');
     emptyValue('inputPin');
+    emptyText('generateMessage');
     audio.play();
 }
 
@@ -49,7 +50,30 @@ function submitBtn() {
             document.getElementById('textMessage').innerText = "Press the 4 digit number";
             shake('textMessage');
         }
+        else {
+            displayBlock('notify-content');
+            if (randomNum == typeNum) {
+                emptyValue('inputPin');
+                emptyValue('generateNum');
+                displayBlock('matched');
+                displayNone('unmatched');
+                emptyText('textMessage');
+                shake('generateMessage');
+                document.getElementById('generateMessage').innerText = "Generate Number Again";
+            } 
+            else {
+                emptyValue('inputPin');
+                displayBlock('unmatched');
+                displayNone('matched');
+                emptyText('textMessage');
+            }
+        }
     }
+}
+
+// Notification Close
+function notifyContent() {
+    displayNone('notify-content');
 }
 
 
