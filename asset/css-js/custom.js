@@ -2,7 +2,9 @@
 function randomNumFun() {
     var randomNumber = Math.floor(1000 + Math.random() * 9000);
     document.getElementById('generateNum').value = randomNumber;
-
+    document.getElementById('textMessage').innerText = "Press & Submit the Pin Code";
+    shake('textMessage');
+    emptyValue('inputPin');
     audio.play();
 }
 
