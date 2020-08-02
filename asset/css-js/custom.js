@@ -2,6 +2,8 @@
 function randomNumFun() {
     var randomNumber = Math.floor(1000 + Math.random() * 9000);
     document.getElementById('generateNum').value = randomNumber;
+
+    audio.play();
 }
 
 
@@ -10,6 +12,8 @@ function btnKey(id) {
     let prevValue = document.getElementById('inputPin').value;
     let key = document.getElementById(id).innerHTML;
     document.getElementById('inputPin').value = prevValue + key;
+
+    audio.play();
 }
 
 
