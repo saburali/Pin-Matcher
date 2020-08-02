@@ -86,6 +86,7 @@ function tryLeft(id) {
     document.getElementById(id).innerHTML -= 1;
     if (tryAgain == "1") {
         disableBtn('submit');
+        reaload();
     }
 }
 
@@ -96,6 +97,13 @@ function disableBtn(id) {
     button.style.cursor = "not-allowed";
     button.setAttribute('disabled', 'true');
     button.title = "Please Reload Page";
+}
+
+
+// Reaload Button
+function reaload() {
+    let refresh = document.getElementById('reaload');
+    refresh.style.display = "block";
 }
 
 
