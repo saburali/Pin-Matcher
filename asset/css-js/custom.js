@@ -35,6 +35,18 @@ function cleanLast() {
 }
 
 
+// Matchig Pin - Submit Button Condition
+function submitBtn() {
+    var randomNum = document.getElementById('generateNum').value;
+    var typeNum = document.getElementById('inputPin').value;
+
+    if (randomNum.length == 0) {
+        document.getElementById('generateMessage').innerText = "Please Generate Random Number First";
+        shake('generateMessage');
+    }
+}
+
+
 // Some Use Common Function
 function emptyValue(id) {
     document.getElementById(id).value = '';
