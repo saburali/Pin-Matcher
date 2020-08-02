@@ -58,6 +58,7 @@ function submitBtn() {
                 displayBlock('matched');
                 displayNone('unmatched');
                 emptyText('textMessage');
+                displayNone('tryContent');
                 shake('generateMessage');
                 document.getElementById('generateMessage').innerText = "Generate Number Again";
             } 
@@ -66,6 +67,8 @@ function submitBtn() {
                 displayBlock('unmatched');
                 displayNone('matched');
                 emptyText('textMessage');
+                displayBlock('tryContent');
+                tryLeft('tryLeft');
             }
         }
     }
@@ -74,6 +77,16 @@ function submitBtn() {
 // Notification Close
 function notifyContent() {
     displayNone('notify-content');
+}
+
+
+// Try Left Again (Practice)
+function tryLeft(id) {
+    var tryAgain = document.getElementById(id).innerHTML;
+    document.getElementById(id).innerHTML -= 1;
+    if (tryAgain == "1") {
+        disableBtn('submit');
+    }
 }
 
 
