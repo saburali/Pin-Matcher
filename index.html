@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pin Matcher </title>
+    <link href="asset/css-js/bootstrap.min.css" rel="stylesheet" />
+    <link href="asset/css-js/style.css" rel="stylesheet" />
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="half-width">
+                    <div class="pin-generator">
+                        <input id="generateNum" class="form-control" type="text" placeholder="Generate" value="">
+                        <p id="generateMessage"></p>
+                        <div class="generateBtnSec">
+                            <button class="generate-btn"> <span>Generate Pin</span> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="con-12 half-width">
+                    <div class="input-numberSection">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td colspan="4">
+                                        <img src="asset/image/display.jpg" alt="display" />
+                                        <div class="input-container">
+                                            <input id="inputPin" type="text" placeholder="Type" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text" colspan="4" id="textMessage"> </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button">7</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">8</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">9</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button">4</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">5</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">6</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button">1</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">2</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">3</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button">&lt;</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">0</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">c</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="notify-content">
+                <div class="notify-section">
+                    <p class="notify"> <span>3</span> try left </p>
+                    <p class="notify"> ❌ Pin Didn't Match. </p>
+                    <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                    <button type="button"> Close </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asset/css-js/custom.js" type="text/javascript"></script>
 </body>
+
 </html>
